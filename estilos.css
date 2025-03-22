@@ -157,3 +157,111 @@ button:hover {
         margin: 5px 0;
     }
 }
+
+/* Estilos para el modo oscuro */
+.modo-oscuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.modo-oscuro main {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.modo-oscuro h2, .modo-oscuro h3, .modo-oscuro h4 {
+    color: #3498db;
+    border-color: #3498db;
+}
+
+.modo-oscuro a {
+    color: #3498db;
+}
+
+.modo-oscuro th, .modo-oscuro td {
+    border-color: #333;
+}
+
+.modo-oscuro input, .modo-oscuro textarea {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.modo-oscuro button {
+    background-color: #3498db;
+}
+
+.modo-oscuro button:hover {
+    background-color: #2980b9;
+}
+
+/* Botón de modo oscuro */
+.boton-modo {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.boton-modo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones */
+.animacion-entrada {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: entradaSuave 0.5s forwards;
+}
+
+@keyframes entradaSuave {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retraso en las animaciones para que entren secuencialmente */
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+section:nth-child(5) { animation-delay: 0.5s; }
+section:nth-child(6) { animation-delay: 0.6s; }
+
+/* Estilos para las habilidades */
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.habilidad {
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.habilidad:hover {
+    transform: scale(1.05);
+    background-color: #3498db;
+}
+
+.modo-oscuro .habilidad {
+    background-color: #3498db;
+}
+
+.modo-oscuro .habilidad:hover {
+    background-color: #2980b9;
+}
